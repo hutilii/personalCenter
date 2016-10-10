@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>商品详情</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #F5F5F5;
+        }
+
+        .text {
+            padding: 15px;
+        }
+
+        .title {
+            line-height: 2.333333;
+        }
+
+        .content {
+            line-height: 1.68888;
+        }
+
+        .s-content {
+            line-height: 1.3;
+        }
+
+        .bottom-menu {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 45px;
+            background: #fafafa;
+            display: inline-flex;
+            z-index: 1000;
+            width: 100%;
+            align-items: center;
+        }
+
+        .bottom-menu:before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #dedfe2;
+            transform: scaleY(0.5);
+        }
+
+        .bottom-left {
+            flex: 1.3;
+            text-align: left;
+            margin-left: 20px;
+
+        }
+
+        .bottom-right {
+            flex: 1;
+            text-align: center;
+        }
+
+        .bottom-right a {
+            background: #7e1b35;
+            color: white;
+            line-height: 2.33333;
+            border-radius: 5px;
+            padding: 7px 20px 7px 20px;
+            text-decoration: none;
+        }
+
+        #feng {
+            color: #cc0000;
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="../image/mibanner.png" width="100%" height="100%">
+</div>
+<div class="text">
+    <b class="title">商品简介:</b>
+    <p class="s-content">小米手环的主要功能包括查看运动量,监测睡眠质量,智能闹钟唤醒等。可以通过手机应用实时查看运动量,监测
+        走路和跑步效果,可以通过云端识别更多的运动项目。</p>
+    <br class="content">
+    <b class="title">功能介绍:</b>
+    <p class="content">采用铝合金表面,激光微穿孔,拥有众多功能:<br>
+        1.手机解锁不用输密码<br>
+        2.监测运动量、随眠质量,智能闹钟震动唤醒<br>
+        3.超长代价30天,是普通手环的5倍,业界最低功耗蓝牙芯片<br>
+        4.防水等级IP67,洗澡时无需摘下</p><br>
+    <b class="title">兑换须知:</b>
+    <p class="s-content">商品一经兑换,一律不退换积分,请会员兑换
+        前仔细阅读商品信息。</p>
+    <div style="height: 45px"></div>
+</div>
+<div class="bottom-menu">
+    <div class="bottom-left"><label>单价:</label><label id="feng">2000</label><label>积分</label></div>
+    <div class="bottom-right">
+        <a href="createOrder.html">立即兑换</a>
+    </div>
+
+</div>
+</body>
+</html>

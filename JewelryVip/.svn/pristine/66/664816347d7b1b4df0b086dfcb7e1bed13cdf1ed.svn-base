@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>所在地区</title>
+  <script src="../build/jquery-1.8.3.min.js"></script>
+  <script src="../js/local.js"></script>
+  <link rel="stylesheet" href="../style/register.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+</head>
+<body>
+<div id="province" class="ul-block">
+  <ul id="province_list" class="list"></ul>
+</div>
+<div id="city" class="ul-block" style="display: none">
+  <ul id="city_list" class="list"></ul>
+</div>
+<div id="county" class="ul-block" style="display:none;">
+  <ul id="county_list" class="list"></ul>
+</div>
+</body>
+<script>
+
+</script>
+</html>

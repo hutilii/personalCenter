@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="../style/weui.css"/>
+    <link rel="stylesheet" type="text/css" href="../style/weui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../style/mui.css"/>
+    <link rel="stylesheet" type="text/css" href="../style/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../style/app.css"/>
+    <script type="text/html" id="tpl_navbar"></script>
+    <script src="../js/mui.js"></script>
+    <script src="../build/jquery-1.8.3.min.js"></script>
+    <script src="http://statics.webkfa.com/mui/mui.min.js"></script>
+    <script src="http://statics.webkfa.com/mui/app.js"></script>
+
+    <style>
+        .weui_select {
+            position: absolute;
+            float: left;
+            margin-top: -20px;
+            left: 82%;
+            height: 60px;
+        }
+
+        .miuname {
+            width: 30%;
+            border: 1px solid #000000;
+        }
+
+        .mui-table-view-divider {
+            padding-bottom: 2px;
+        }
+
+        .mui-input-row {
+            padding: 0px 0px;
+            top: 0px;
+            right: 0px;
+            text-align: left;
+        }
+
+        .mui-input-group {
+            /*width: 100px;*/
+        }
+
+        .mmm {
+            text-align: right;
+            top: 5px;
+            width: 160px;
+            float: right;
+            margin-top: -5px;
+            margin-right: -15px;
+        }
+
+        .birth {
+            position: absolute;
+            float: left;
+            top: 15px;
+        }
+
+        .birthdate {
+            position: absolute;
+            float: right;
+            left: 56%;
+            top: 7px;
+        }
+
+        /*.mui-table-view-cell {
+            height: 40px;
+        }
+        */
+        .cellheight {
+            height: 50px;
+        }
+
+        .blueMap {
+            margin-left: 0px;
+            width: 100%;
+            height: 160px;
+            background: #FDDFE8;
+        }
+
+        .con {
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            float: left;
+        }
+
+        .name {
+            margin-left: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+            float: left;
+        }
+
+        .buttons {
+            width: 100%;
+            height: 80px;
+            background: #f2f2f2;
+        }
+
+        .btn1 {
+            margin-left: 15px;
+            margin-top: 10px;
+            width: 50% -30px;
+            height: 45px;
+            border: 1px solid #CECCD3;
+            float: left;
+            background: white;
+        }
+
+        .btn2 {
+            margin-right: 15px;
+            margin-top: 10px;
+            /*margin-left: 20px;*/
+            height: 45px;
+            border: 1px solid #CECCD3;
+            float: right;
+            background: white;
+        }
+
+        .btnImage {
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin-left: 10px;
+            margin-right: 10px;
+
+        }
+
+        .btntitle {
+            float: left;
+            color: black;
+            padding-top: 10px;
+            margin-right: 15px;
+        }
+
+        .weui_cells_title {
+            margin-top: -23px;
+            margin-bottom: 0px;
+            font-size: 17px;
+            background: #f2f2f2;
+        }
+
+        .infomation {
+            margin-left: 10px;
+            margin-top: 7px;
+            /*border: 1px solid #000000;*/
+            height: 30px;
+        }
+
+        .starCon {
+            margin-top: 5px;
+            margin-left: -70px;
+            /*padding-top: 10px;*/
+            width: 20px;
+            height: 20px;
+            /*border: 1px solid #000000;*/
+            border-radius: 10px;
+            float: left;
+        }
+
+        .vipName {
+            margin-left: -50px;
+            font-size: 13px;
+            margin-top: 5px;
+            height: 20px;
+            color: rgb(208, 135, 48);
+            float: left;
+        }
+
+        .line {
+            /*border: 1px solid #000000;*/
+            height: 0px;
+        }
+
+        .starline {
+            width: 90%;
+            height: 5px;
+            margin-left: 10px;
+            padding-top: -50px;
+            /*display:inline-block;*/
+        }
+
+        .labelone {
+            font-size: 13px;
+            margin-left: 20px;
+            float: left;
+            margin-top: -10px;
+        }
+
+        .labeltwo {
+            font-size: 13px;
+            float: right;
+            margin-right: 20px;
+            margin-top: -10px;
+        }
+
+        .integralWhole {
+            margin-top: 10px;
+            margin-left: 100px;
+        }
+
+        .star {
+            width: 10px;
+            height: 8px;
+            margin-left: 20px;
+            margin-top: 0px;
+            /*display:inline-block;*/
+        }
+
+        .integral {
+            font-size: 10px;
+            margin-left: 15px;
+            margin-top: -10px;
+        }
+
+        .unit {
+            font-size: 10px;
+            margin-left: 15px;
+            margin-top: -20px;
+        }
+
+        .mui-segmented-control .mui-control-item {
+            color: black;
+            border-color: #FFFFFF;
+            border-left: 1px solid #909090;
+        }
+
+        .mui-segmented-control .mui-control-item.mui-active {
+            color: #fff;
+            background-color: #909090;
+        }
+
+        .mui-segmented-control {
+            border: 1px solid #FFFFFF;
+        }
+
+        .mui-control-item {
+            background: white;
+        }
+
+        .mui-content-padded {
+            margin: 0px;
+        }
+
+        .righticon {
+            height: 15px;
+            width: 10px;
+            margin-top: 5px;
+            margin-right: 0px;
+            float: right;
+        }
+
+        p.text {
+            word-wrap: break-word;
+        }
+
+        /*第三个*/
+        .firstname {
+            height: 20px;
+            /*width: 75px;*/
+            float: left;
+            margin-left: 0px;
+            margin-top: 0px;
+            text-align: left;
+        }
+
+        .secname {
+            font-size: 15px;
+            color: red;
+            height: 20px;
+            /*width: 60px;*/
+            float: left;
+            margin-top: 0px;
+            text-align: left;
+        }
+
+        .dateicon {
+            height: 20px;
+            /*width: 145px;*/
+            /*background: red;*/
+            font-size: 15px;
+            float: right;
+            margin-right: 0px;
+            margin-top: 0px;
+            text-align: right;
+        }
+
+        .midcell {
+            width: 100%;
+            height: 60px;
+            margin-top: 5px;
+            background-color: #EFEFF4;
+        }
+
+        .thirdcell {
+            width: 100%;
+            height: 20px;
+        }
+
+        .commodityIcon {
+            height: 40px;
+            width: 40px;
+            margin-left: 15px;
+            margin-top: 10px;
+            float: left;
+        }
+
+        .rightLabel {
+            height: 20px;
+            width: 160px;
+            float: left;
+            margin-left: 10px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .howmuch {
+            height: 20px;
+            width: 200px;
+            font-size: 16px;
+            float: right;
+            margin-right: 0px;
+            margin-top: -15px;
+            text-align: right;
+        }
+
+        .inte {
+            height: 20px;
+            width: 35px;
+            font-size: 16px;
+            float: right;
+            margin-right: 0px;
+            margin-top: -12px;
+            text-align: right;
+        }
+
+        .integralNum {
+            height: 20px;
+            width: 35px;
+            font-size: 16px;
+            float: right;
+            color: red;
+            margin-right: 0px;
+            margin-top: -12px;
+            text-align: right;
+        }
+
+        .total {
+            height: 20px;
+            width: 40px;
+            font-size: 16px;
+            float: right;
+            margin-right: 0px;
+            margin-top: -12px;
+            text-align: right;
+        }
+
+        /*
+        第二*/
+        .diyihang {
+            width: 100%;
+            height: 200px;
+            margin-top: 10px;
+            background-color: #F5F5F5;
+        }
+
+        .dierhang {
+            width: 100%;
+            height: 200px;
+            margin-top: 2px;
+            background-color: #F5F5F5;
+        }
+
+        .one {
+            width: 49.8%;
+            height: 200px;
+            float: left;
+            background-color: #FFF;
+        }
+
+
+       .tuxiao{
+           width: 100%;
+           height: 150px;
+           border:0;
+           background-image: url(../image/xiaomi.png);
+           background-repeat: no-repeat;
+           background-size: 100%;
+       }
+        .l_one {
+            width: 50%;
+            float: left;
+
+            text-align: center;
+        }
+
+        .l_two {
+            width: 50%;
+           float: right;
+            color: #8b354c;
+
+            text-align: center;
+        }
+
+        .one_dec {
+            text-align: center;
+        }
+
+        .one_di {
+            width: 100%;
+            text-align: center;
+        }
+
+        .two {
+            width: 49.8%;
+            height: 200px;
+            float: right;
+            background-color: #FFF;
+        }
+
+        .i7{
+            width: 100%;
+            height: 150px;
+            background-image: url(../image/ip7.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            border:none;
+        }
+
+        .twol_one {
+            width: 50%;
+            float: left;
+
+            text-align: center;
+        }
+
+        .twol_two {
+            width: 50%;
+            float: right;
+            color: #8b354c;
+
+            text-align: center;
+        }
+
+        .two_dec {
+            text-align: center;
+        }
+
+        .two_di {
+            width: 100%;
+            text-align: center;
+        }
+
+        .ss {
+            color: #F00;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="segmentedControl" class="mui-segmented-control">
+    <a class="mui-control-item mui-active" href="#item1mobile">
+        会员俱乐部
+    </a>
+    <a class="mui-control-item" href="#item2mobile">
+        积分商城
+    </a>
+    <a class="mui-control-item" href="#item3mobile">
+        兑换记录
+    </a>
+    <a class="mui-control-item" href="#item4mobile">
+        个人中心
+    </a>
+</div>
+
+
+<div class="mui-content-padded">
+    <div id="item1mobile" class="mui-control-content mui-active">
+        <ul class="mui-table-view">
+            <div class="blueMap">
+                <div>
+                    <img class="con" src="../image/vip.png" alt="icon"/>
+                    <p class="name">陈娟</p>
+                </div>
+                <br/>
+                <br/>
+                <div class="infomation">
+                    <img class="starCon" src="../image/huiyuanxin.png" alt="starIcon"/>
+                    <p class="vipName">银卡会员</p>
+                </div>
+                <div class="line">
+                    <img class="starline" src="../image/huiyuanjdt.png" alt="starLine"/>
+                </div>
+
+                <div class="integralWhole">
+                    <img class="star" src="../image/gundongsanjiao.png" alt="star"/>
+                    <p class="integral">3000</p>
+                    <p class="unit">银卡</p>
+                </div>
+
+                <div class="baseLabel">
+                    <p class="labelone">积分:3000</p>
+                    <p class="labeltwo">还差500积分升级为金卡会员</p>
+                </div>
+            </div>
+            <!--两个点击事件-->
+            <div class="buttons">
+                <div class="btn1">
+                    <a class="btntitle" href="index.html"><img class="btnImage" src="../image/zhuanban.png" alt=""/>幸运抽大奖</a>
+                </div>
+                <div class="btn2">
+                    <a class="btntitle" href=""><img class="btnImage" src="../image/jifeng.png" alt=""/>积分超值兑</a>
+                </div>
+            </div>
+            <br/>
+            <div class="weui_cells_title">我的特权</div>
+            <li class="mui-table-view-cell mui-collapse">
+                <a class="mui-navigate-right" href="#" onclick="transf()">
+                    <img src="../image/xiangyoukuozhanfu.png" class="righticon">会员折扣</img>
+                </a>
+                <ul class="mui-table-view mui-table-view-chevron">
+                    <li class="mui-table-view-cell">
+                        <p class="text">
+                            不同等级的会员购买亚寰产品享有等级专享的折扣优惠，等级越高，享受的优惠力度越大。
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li class="mui-table-view-divider"></li>
+            <li class="mui-table-view-cell mui-collapse">
+                <a class="mui-navigate-right" href="#">
+                    <img src="../image/xiangyoukuozhanfu.png" class="righticon">生日惊喜</img>
+                </a>
+                <ul class="mui-table-view mui-table-view-chevron">
+                    <li class="mui-table-view-cell">
+                        <p class="text">
+                            专属生日礼券:生日当天可领专属生日领券，每位会员一年只能领一次，不同等级的会员领取的优惠券数额不同。
+                        </p>
+                    </li>
+                    <li class="mui-table-view-cell">
+                        <p class="text">
+                            双倍积分:生日当天购买产品可获得双倍积分，每位会员一年享有一次机会。
+                        </p>
+                    </li>
+                    <li class="mui-table-view-cell">
+                        <p class="text">
+                            精美礼物:生日当天去门店可领取精美礼品一份。
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li class="mui-table-view-divider"></li>
+            <li class="mui-table-view-cell mui-collapse">
+                <a class="mui-navigate-right" href="#">
+                    <img src="../image/xiangyoukuozhanfu.png" class="righticon">结婚纪念日</img>
+                </a>
+                <ul class="mui-table-view mui-table-view-chevron">
+                    <li class="mui-table-view-cell">
+                        <p class="text">
+                            双倍积分:结婚纪念日当天购买产品可获双倍积分，每位会员一年享有一次机会。
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li class="mui-table-view-divider"></li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" href="coupon.html">
+                    <img src="../image/xiangyoukuozhanfu.png" class="righticon">我的优惠券</img>
+                </a>
+            </li>
+
+    </div>
+
+    <div id="item2mobile" class="mui-control-content">
+        <ul class="mui-table-view">
+            <div class="diyihang">
+                <div class="one">
+                    <a style="height: 100%;width: 100%;position: absolute;z-index: 1000 border:0" href="product_detail.html">  </a>
+                    <div class="tuxiao" ></div>
+                    <div class="one_dec">小米手环</div>
+                    <div class="one_di">
+                        <div class="l_one"><span class="ss">2000</span>积分</div>
+                        <div class="l_two">库存：18</div>
+                    </div>
+                </div>
+                <div class="two">
+                    <a href="product_detail.html" ></a>
+                   <div class="i7"></div>
+                    <div class="two_dec">iPhone7</div>
+                    <div class="two_di">
+                        <label class="twol_one"><span class="ss">100000</span>积分</label>
+                        <label class="twol_two">库存：10</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="dierhang">
+                <div class="one">
+                    <a href="product_detail.html"></a>
+                    <div class="tuxiao" ></div>
+                    <div class="one_dec">小米手环</div>
+                    <div class="one_di">
+                        <label class="l_one"><span class="ss">2000积分</span></label>
+                        <label class="l_two">库存：18</label>
+                    </div>
+                </div>
+                <div class="two">
+                    <a href="product_detail.html"></a>
+                    <div class="i7"></div>
+                    <div class="two_dec">iPhone7</div>
+                    <div class="two_di">
+                        <div class="twol_one"><span class="ss">100000</span>积分</div>
+                        <div class="twol_two">库存：10</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </ul>
+    </div>
+
+    <div id="item3mobile" class="mui-control-content">
+        <ul class="mui-table-view">
+            <div class="mui-content">
+                <form class="mui-input-group">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell">
+                            <div style="width:1400px;height:10px;margin-left:-15px;margin-top: -10px; padding:0px;background-color:#EFEFF4;overflow:hidden;"></div>
+                            <div class="firstcell">
+                                <label class="firstname">订单状态:</label>
+                                <label class="secname">已收货</label>
+                                <label class="dateicon">2016-10-02 12:21:14</label>
+                            </div>
+                            <br/>
+                            <div class="midcell">
+                                <img src="../image/miband.png" class="commodityIcon"/>
+                                <label class="rightLabel">小米智能手环</label>
+                            </div>
+                            <br/>
+                            <div class="thirdcell">
+                                <label class="howmuch">共1件&nbsp;&nbsp;(运费:&nbsp;&nbsp;¥ 10)</label><br/>
+                                <label class="inte">积分</label>
+                                <label class="integralNum">2000</label>
+                                <label class="total">合计:</label>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="mui-table-view">
+                    <div style="width:100%;height:10px;margin-left:0px;margin-top: 0px; padding:0px;background-color:#EFEFF4;overflow:hidden;"></div>
+                        <li class="mui-table-view-cell"> 
+                            <div class="firstcell">
+                                <label class="firstname">订单状态:</label>
+                                <label class="secname">已收货</label>
+                                <label class="dateicon">2016-10-02 12:21:14</label>
+                            </div>
+                            <br/>
+                            <div class="midcell">
+                                <img src="../image/miband.png" class="commodityIcon"/>
+                                <label class="rightLabel">小米智能手环</label>
+                            </div>
+                            <br/>
+                            <div class="thirdcell">
+                                <label class="howmuch">共1件&nbsp;&nbsp;(运费:&nbsp;&nbsp;¥ 10)</label><br/>
+                                <label class="inte">积分</label>
+                                <label class="integralNum">2000</label>
+                                <label class="total">合计:</label>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </ul>
+    </div>
+
+    <div id="item4mobile" class="mui-control-content">
+        <ul class="mui-table-view">
+            <div class="mui-content">
+                <form class="mui-input-group">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell cellheight">
+
+                            <a class="mui-navigate-right">
+                                <label class="birth">姓名</label>
+                                <input type="text" class="mmm" placeholder="请输入">
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell cellheight">
+
+                            <a class="mui-navigate-right">
+                                <label class="birth">性别</label>
+                                <select class="weui_select" name="select1">
+                                    <option selected="" value="1">男</option>
+                                    <option value="2">女</option>
+                                </select>
+                                <img src="../image/xiangyoukuozhanfu.png" class="righticon"/>
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell cellheight">
+
+                            <a class="mui-navigate-right">
+                                <label class="birth">生日</label>
+                                <input type="date" class="birthdate"/>
+                                <img src="../image/xiangyoukuozhanfu.png" class="righticon"/>
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell cellheight">
+                            <a class="mui-navigate-right">
+                                <label class="birth">结婚纪念日</label>
+                                <input type="date" class="birthdate"/>
+                                <img src="../image/xiangyoukuozhanfu.png" class="righticon"/>
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell cellheight">
+                            <a href="address.html" class="mui-navigate-right">
+                                <label class="birth">收货地址管理</label>
+                                <img src="../image/xiangyoukuozhanfu.png" class="righticon"/>
+                            </a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+<script>
+    $(function () {
+        $('.btn2').on('click', '.btntitle', function () {
+            $('[href=#item1mobile]').removeClass('mui-active')
+            $('[href=#item2mobile]').addClass('mui-active')
+            $('#item1mobile').removeClass('mui-active')
+            $('#item2mobile').addClass('mui-active')
+        })
+    })
+</script>
+
+</html>

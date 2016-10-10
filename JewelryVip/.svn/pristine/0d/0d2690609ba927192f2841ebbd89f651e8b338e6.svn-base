@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>登录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background-image: url(../image/loginbg.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .warp {
+            margin: 200px auto 0;
+            width: 75%;
+            height: 220px;
+            padding: 5%;
+            margin：0 auto;
+            font-size: 14px;
+        }
+
+        .warp_in {
+            height: 140px;
+            width: 100%;
+        }
+
+        .warp_1 {
+            width: 92%;
+            height: 40px;
+            margin: 15px auto;
+            padding: 0 0 0 4%;
+            background-color: #FFF;
+            border-radius: 10px;
+        }
+
+        .warp_1 img {
+            width: 15px;
+            height: 25px;
+            float: left;
+            margin-right: 3%;
+            padding-left: 10px;
+            margin-top: 7px;
+        }
+
+        .warp_1 input {
+            width: 80%;
+            height: 35px;
+            background-color: transparent;
+            float: right;
+            border: 0px;
+            margin-right: 5px;
+            margin-top: 4px;
+            outline: none;
+            color: #FFB1C6;
+        }
+
+        .warp_2 {
+            width: 56%;
+            height: 40px;
+            margin: 15px auto;
+            background: #fff;
+            float: left;
+            margin-left: 4%;
+            border-radius: 10px;
+        }
+
+        .warp_2 img {
+            width: 18px;
+            height: 25px;
+            float: left;
+            margin-right: 3%;
+            padding-left: 10px;
+            margin-top: 7px;
+        }
+
+        .warp_2 input {
+            width: 67%;
+            height: 35px;
+            background: #fff;
+            float: right;
+            margin-top: 4px;
+            border: 0px;
+            outline: none;
+            margin-right: 5px;
+            color: #FFB1C6;
+        }
+
+        .warp_3 {
+            width: 34%;
+            height: 40px;
+            margin: 15px auto;
+            float: right;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 4%;
+            border-radius: 8px;
+            color: #FFF;
+            background-color: #c691a3;
+            opacity: 0.7;
+        }
+
+        .warp a {
+            width: 60%;
+            height: 50px;
+            margin: 10px auto;
+            display: block;
+            text-align: center;
+            line-height: 50px;
+            table-layout: auto;
+            font-size: 24px;
+            border-radius: 10px;
+            color: #FFF;
+            background-color: #c691a3;
+            opacity: 0.7;
+            text-decoration: none;
+            font-weight: 900;
+        }
+
+    </style>
+    <SCRIPT LANGUAGE="JavaScript">
+        <!--
+        function getGray(obj) {
+            obj.style.color = '#FFB1C6';
+            {
+                obj.value = '手机号码'
+            }
+
+        }
+        function getGrayTwo(obj) {
+            obj.style.color = '#FFB1C6';
+            {
+                obj.value = '密码'
+            }
+
+        }
+        function getBlack(obj) {
+            obj.style.color = '#000000';
+
+            {
+                obj.value = ''
+            }
+
+        }
+        //-->
+    </SCRIPT>
+</head>
+
+<body>
+<div class="warp">
+    <div class="warp_in">
+        <div class="warp_1">
+            <p><img src="../image/shouji.png"/></p>
+            <p>
+                <input type="text" value="手机号码"
+                       onfocus="getBlack(this);" onblur="getGray(this);"/>
+            </p>
+        </div>
+        <div class="warp_2">
+            <img src="../image/mima.png"/>
+            <input type="text" value="密码"
+                   onfocus="getBlack(this);" onblur="getGrayTwo(this);"/>
+        </div>
+        <div class="warp_3">获取验证码</div>
+    </div>
+
+    <a href="reme.html">登录</a>
+</div>
+</body>
+<script>
+    (function (doc, win) {
+        var h = doc.documentElement.clientHeight;
+        var w = doc.documentElement.clientWidth;
+        var h2 = w * 16 / 9;
+        doc.documentElement.style.fontSize = doc.documentElement.clientHeight / 40 + 'px'
+        console.log(doc.documentElement.style.fontSize);
+        [].forEach.call(document.getElementsByClassName('bg'), function (element) {
+
+            element.style.transform = 'translateY(-' + (h2 - h) + 'px)'
+        });
+
+    })
+    (document, window);
+</script>
+</html>

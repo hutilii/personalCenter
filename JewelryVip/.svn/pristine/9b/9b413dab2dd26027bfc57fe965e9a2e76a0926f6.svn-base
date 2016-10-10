@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>优惠券</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style type="text/css">
+        body {
+            background-color: rgb(242, 242, 242);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font: normal 16px "微软雅黑";
+            color: #000000;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #tablist {
+            width: 100%;
+            height: auto;
+            background-color: #F2F2F2;
+        }
+
+        #div1 {
+            width: 90%;
+            height: 8em;
+            margin: 0px auto;
+            background-image: url("../image/youhuijuanbg.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: top;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            position: relative;
+        }
+
+        #div1 div.cardtype {
+            text-align: center;
+            width: 8em;
+            height: 5.5em;
+            position: absolute;
+            bottom: 0.7em;
+            left: 0.5em;
+            background-image: url("../image/huabian.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            float: left;
+        }
+
+        #div1 div p.p1 {
+            position: relative;
+            top: 45%;
+            color: rgb(134, 105, 46);
+        }
+
+        #div1 div.detailtext {
+            width: 12rem;
+            position: absolute;
+            bottom: 5px;
+            right: 0px;
+        }
+
+        #div1 div p.cardvalue {
+            color: red;
+            font-family: "黑体";
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #div1 div p.carddesc {
+            color: rgb(134, 105, 46);
+            font-family: "方正华隶简体";
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #div1 div p.carddate {
+            color: white;
+            font-family: "方正华隶简体";
+            font-size: 13px;
+            text-align: center;
+            margin: 5px auto;
+        }
+
+        /****************************/
+        #div2 {
+            width: 90%;
+            height: 8em;
+            margin: 0px auto;
+            background-image: url("../image/yishiyongbg.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: top;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            position: relative;
+        }
+
+        #div2 div.cardtype {
+            text-align: center;
+            width: 8em;
+            height: 5.5em;
+            position: absolute;
+            bottom: 0.7em;
+            left: 0.5em;
+            background-image: url("../image/yishiyonghuabian.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            float: left;
+        }
+
+        #div2 div p.p1 {
+            position: relative;
+            top: 45%;
+            color: #9a9a9a;
+            font-family: "方正姚体";
+        }
+
+        #div2 div.detailtext {
+            width: 12rem;
+            position: absolute;
+            bottom: 5px;
+            right: 0px;
+        }
+
+        #div2 div p.cardvalue {
+            color: #9a9a9a;
+            font-family: "黑体";
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #div2 div p.carddesc {
+            color: #9a9a9a;
+            font-family: "方正华隶简体";
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #div2 div p.carddate {
+            color: #9a9a9a;
+            font-family: "方正华隶简体";
+            font-size: 13px;
+            text-align: center;
+            margin: 5px auto;
+        }
+
+        /****************************/
+        #tablist ul {
+            width: 160px;
+            height: 32px;
+            margin: 20px auto;
+        }
+
+        #ul1 li {
+            display: inline-block;
+            width: 80px;
+            line-height: 30px;
+            text-align: center;
+            margin: 0px 0px;
+            background-color: white;
+            float: left;
+        }
+
+        #ul1 li.active {
+            color: #FFFFFF;
+            background-color: rgb(106, 15, 40);
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        /*#tablist div li{height: 30px;line-height: 30px;text-indent: 8px;}*/
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var oUl1 = document.getElementById("ul1");
+            var aLi = oUl1.getElementsByTagName("li");
+            var oDiv = document.getElementById("tablist");
+            var bDiv = oDiv.childNodes;
+            var aDiv = new Array();
+            for (var x = 0; x < bDiv.length; x++) {
+                // console.log(bDiv[x].nodeName);
+                if (bDiv[x].nodeName == "DIV") {
+                    aDiv.push(bDiv[x]);//将tablist下的子节点是div的元素保存到aDiv数组中
+                }
+            }
+            // console.log(aDiv.length);
+            for (var i = 0; i < aLi.length; i++) {
+                aLi[i].index = i;
+                /**/
+                aLi[i].onclick = function () {
+                    for (var i = 0; i < aLi.length; i++) {
+                        aLi[i].className = "";
+                    }
+                    this.className = "active";
+                    for (var j = 0; j < aDiv.length; j++) {
+                        aDiv[j].className = "hide";
+                    }
+                    console.log(this);
+                    aDiv[this.index].className = "show";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="tablist">
+    <ul id="ul1">
+        <li class="active">待使用</li>
+        <li>已使用</li>
+    </ul>
+
+    <!--需要显示或者隐藏的模块-->
+    <div id="div1">
+        <!--卡片类型的div-->
+        <div class="cardtype">
+            <p class="p1">生日礼券</p>
+        </div>
+
+        <div class="detailtext">
+            <p class="cardvalue">¥300元</p>
+            <p class="carddesc">消费满1000元可用</p>
+            <p class="carddate">使用日期：2016.01.01-2016.10.10</p>
+        </div>
+    </div>
+
+    <div id="div2" class="hide">
+        <div class="cardtype">
+            <p class="p1">生日礼券</p>
+        </div>
+
+        <div class="detailtext">
+            <p class="cardvalue">¥300元</p>
+            <p class="carddesc">消费满1000元可用</p>
+            <p class="carddate">使用日期：2016.01.01-2016.10.10</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

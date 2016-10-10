@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scalable=1,user-scalable=0">
+    <title>兑换记录</title>
+    <link rel="stylesheet" href="../style/register.css">
+    <link rel="stylesheet" href="../style/mui.min.css">
+    <script src="../js/mui.min.js"></script>
+
+</head>
+<body>
+<div class="title-img mui-slider">
+    <div class="mui-slider-group mui-slider-loop">
+        <!--支持循环，需要重复图片节点-->
+        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="4.jpg"/></a></div>
+        <div class="mui-slider-item"><a href="#"><img src="../image/shouhuan.png"/></a></div>
+        <div class="mui-slider-item"><a href="#"><img src="../image/shouhuan2.png"/></a></div>
+        <div class="mui-slider-item"><a href="#"><img src="../image/shouhuan3.png"/></a></div>
+        <!--支持循环，需要重复图片节点-->
+        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../image/shouhuan.png"/></a></div>
+    </div>
+</div>
+
+<div class="component">
+    <div style="width: 50% ;text-align: center;flex: 1.5">
+        <label>小米智能手环</label>
+    </div>
+
+    <div class="product-num" style="width: 50%;text-align: center;flex: 1">
+        <div>
+            <label style="line-height: 1.5">库存:10</label>
+            <label style="line-height: 1.5">件</label>
+        </div>
+        <div>
+            <label style="line-height: 1.5">2000</label>
+            <label style="line-height: 1.5">积分</label>
+        </div>
+    </div>
+
+</div>
+<div class="product-card" style="font-size: 15px">
+    <div class="card-title">
+        <p style="margin-left: 15px;margin-bottom: 0 ;color: white">兑换详情:</p>
+    </div>
+    <div class="card-content">
+        商品信息:<br>
+        采用铝合金b表面,激光微穿孔,拥有众多功能:<br>
+        1.手机解锁免输密码。<br>
+        2.监测运动量、睡眠质量、闹钟震动唤醒。
+    </div>
+    <div class=" card-content">
+        兑换须知:<br>
+        商品一经兑换,一律不退换积分,请会员兑换
+        前仔细阅读商品信息。
+    </div>
+</div>
+
+</div>
+<button class="bottom-button">立即兑换</button>
+</body>
+<script>
+    var gallery = mui('.mui-slider');
+    var b = document.querySelector('.bottom-button'), title = document.querySelector('.card-title')
+
+
+    gallery.slider({
+        interval: 3000//自动轮播周期，若为0则不自动播放，默认为0；
+    });
+    setTimeout(function () {
+        b.style = 'background:#ff9013'
+        title.style = 'background:#ff9013'
+    }, 3100)
+    document.querySelector('.mui-slider').addEventListener('slide', function (event) {
+        switch (event.detail.slideNumber) {
+            case 0:
+                setTimeout(function () {
+                    b.style = 'background:#ff9013'
+                }, 3100)
+                setTimeout(function () {
+                    title.style = 'background:#ff9013'
+                }, 3000)
+                break;
+            case 1:
+                setTimeout(function () {
+                    b.style = 'background:#f66467'
+                }, 3100)
+                setTimeout(function () {
+                    title.style = 'background:#f66467'
+                }, 3000)
+                break;
+            case 2:
+                console.log(2)
+                setTimeout(function () {
+                    b.style = 'background:#2fc0b9'
+                }, 3100)
+                setTimeout(function () {
+                    title.style = 'background:#2fc0b9'
+                }, 3000)
+                break;
+        }
+    })
+</script>
+</html>

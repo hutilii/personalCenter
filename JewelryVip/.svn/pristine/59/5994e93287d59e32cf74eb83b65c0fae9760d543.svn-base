@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+<title>div居底</title>  
+<style type="text/css">
+body{
+	background-color: #F5F5F5;	
+		width: 100%;
+	height: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	}
+#bom {
+	position: fixed;
+	bottom: 0px;
+	_position: absolute;
+    _top:expression(document.documentElement.clientHeight + document.documentElement.scrollTop - this.offsetHeight);
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	background-color: #7E1b35;
+	line-height: 50px;
+	color: #FFF;
+	font-weight: 500;
+	left: 0px;
+	text-decoration: none;
+}
+.zong_div{
+	height: auto;
+	background-color: #F5F5F5;
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	}
+	.bao_div{
+	height: 135px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	background-color: #FFF;
+		}
+	.diyihang{
+	height: 20px;
+	width: 100%;
+	}
+		.one_ol{
+	float: left;
+	margin-top: 10px;
+	margin-left: 15px;
+			}
+			.one_tl{
+	float: right;
+	margin-top: 10px;
+	margin-right: 15px;
+			}
+			.two_ol{c
+	width: 100%;
+	margin-left: 15px;
+				}
+				.two_tl{
+	word-break: break-all;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+	margin-top: 10px;
+					}
+				.dierhang{
+	width: 100%;
+	margin-top: 20px;
+	
+					}
+					.disanhang{
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 15px;
+						}
+						.three_rihgt{
+	float: right;
+	width: 40%;
+	height: auto;
+							}
+							.bianji{
+	width: 60px;
+	float: left;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	text-align: center;
+								}
+								.delete{
+	float: right;
+	width: 60px;
+	height: auto;
+	margin-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	margin-right: 20px;
+									}
+			
+</style>  
+</head>  
+<body>  
+<div  class="zong_div" >
+<div  class="bao_div">
+<div  class="diyihang">
+<label class="one_ol">张华</label>
+<label class="one_tl">12345678900</label>
+</div>
+<div  class="dierhang">
+<label class="two_ol">江苏省南京市河西大街156号新地中心18楼1808号</label>
+
+
+
+
+<label class="two_tl">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </label>
+</div>
+
+<div class="disanhang">
+ <input type="checkbox" name="YES_NO" id="r1" value="yes" checked>
+  <label accesskey="Y" for="r1">设为默认地址</label>
+  <div class="three_rihgt">
+  <input  class="delete" type="button" value="删除 ">
+   <input  class="bianji" type="button" value="编辑">
+   
+  </div>
+</div>
+</div>
+<br />
+
+</div>  
+
+<a href="add_address.html" id="bom">新增地址</a> 
+</body>  
+</html>  

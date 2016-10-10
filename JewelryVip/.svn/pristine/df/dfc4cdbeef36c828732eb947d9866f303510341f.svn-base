@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>生成订单</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">  
+	<link rel="stylesheet" href="../style/weui.min.css"/>
+
+	<style type="text/css">
+
+		html{font-size: 62.5%}
+		body{background-color:#efeff4;}
+		div.weui_cells{
+			margin-top: 10px;
+		}
+		div.cells_first{
+			margin: 0px;
+		}
+		div.weui_cell_ft{
+			width: 50%;
+		}
+
+		div.button_exchange{
+			position: fixed;
+			bottom: 0px;
+			width: 100%;
+		}
+		a.button_confirm{border-radius: 0px;background-color: #6A0F29;}
+
+	</style>
+
+	
+</head>
+
+<body>
+<div class="weui_cells cells_first">
+	 <div class="weui_cell" style="background-color: #efeff4">
+        <div class="weui_cell_hd"><img src="../image/miband.png" alt="小米手环" style="width:40px;margin-right:5px;display:block;"></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <p style="color: #666666;">小米智能手环</p>
+        </div>
+        <!-- <div class="weui_cell_ft"></div> -->
+	 </div>
+ <!-- ******************************** -->
+   <div class="weui_cell">
+       <div class="weui_cell_bd weui_cell_primary">
+           <p style="color: #666666;">收货人</p>
+       </div>
+       <div class="weui_cell_ft" style="color: #666666;">
+           丁巧云
+       </div>
+   </div>
+
+   <div class="weui_cell">
+       <div class="weui_cell_bd weui_cell_primary">
+           <p style="color: #666666;">联系电话</p>
+       </div>
+       <div class="weui_cell_ft" style="color: #666666;">
+            15995231314
+       </div>
+   </div>
+
+   <!-- <div class="weui_cells weui_cells_access"> -->
+    <a class="weui_cell weui_cells_access" href="local.html">
+            <div class="weui_cell_bd weui_cell_primary" style="color: black;">
+                <p style="color: #666666;">收货地址</p>
+            </div>
+            <div class="weui_cell_ft weui_cell_addr" style="color: #666666;">南京市鼓楼区星汉大厦南京市鼓楼区星汉大厦</div>
+    </a>
+
+    <div class="weui_cell">
+       <div class="weui_cell_bd weui_cell_primary">
+           <p style="color: #666666;">商品积分</p>
+       </div>
+       <div class="weui_cell_ft" style="color: red;">
+           2000积分
+       </div>
+   </div>
+
+   <div class="weui_cell">
+       <div class="weui_cell_bd weui_cell_primary">
+           <p style="color: #666666;">运费</p>
+       </div>
+       <div class="weui_cell_ft" style="color: red;">
+            ¥10
+       </div>
+   </div>
+</div>
+
+<!-- ******************************************** 按钮-->
+<div class="bd spacing button_exchange">
+    <a href="javascript:;" class="weui_btn weui_btn_primary button_confirm"> 确认并兑换</a>
+ </div>
+ 
+</body>
+
+</html>

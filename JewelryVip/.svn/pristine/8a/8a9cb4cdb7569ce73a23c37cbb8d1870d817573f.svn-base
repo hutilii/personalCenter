@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link rel="stylesheet" href="/app/style/register.css"/>
+
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="block">
+  <div class="input-c">
+
+    <input type="text" class="input-item">
+    <p> 姓名:</p>
+  </div>
+
+  <div class="input-c">
+    <input type="text" class="input-item">
+    <p> 手机号码:</p>
+  </div>
+  <div class="input-c">
+
+    <input type="date" class="input-item">
+    <p> 生日:</p>
+  </div>
+  <div class="input-c">
+
+    <input type="date" class="input-item">
+    <p> 结婚纪念日:</p>
+  </div>
+  <div class="input-c">
+
+    <button class="gCode input-item">发送验证码</button>
+    <input type="text" class="input-item" style="width: 27%">
+    <p> 验证码:</p>
+  </div>
+
+  <form class="sex-form">
+    <div class="left-rd">
+      <input type="radio" checked="checked" name="sex"
+             class="radio">
+      <label>女士</label>
+    </div>
+    <div class="right-rd">
+      <input type="radio" name="sex"
+             class="radio">
+      <label>男士</label>
+    </div>
+
+  </form>
+  <a href="app/html/memberCard.html" class="register-btn">注册</a>
+  <br>
+</div>
+<div class="block-bottom">
+  <div class="block-bottom-item"> 如果您已经是会员可以直接点此处登陆:<a href="app/html/Login.html">立即登陆</a>
+  </div>
+
+
+</div>
+
+
+</div>
+
+
+</body>
+<script>
+  (function (doc, win) {
+    var h = doc.documentElement.clientHeight;
+    var w = doc.documentElement.clientWidth;
+    var h2 = w * 16 / 9;
+    doc.documentElement.style.fontSize = doc.documentElement.clientHeight / 40 + 'px'
+    console.log(doc.documentElement.style.fontSize);
+    [].forEach.call(document.getElementsByClassName('bg'), function (element) {
+      element.style.height = h2 + 'px'
+      element.style.transform = 'translateY(-' + (h2 - h) + 'px)'
+    });
+
+  })
+  (document, window);
+
+</script>
+</html>
